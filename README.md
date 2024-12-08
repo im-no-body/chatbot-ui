@@ -1,3 +1,8 @@
+## Pre-requisites
+
+1. Add `REACT_APP_CHATBOT_API_URL={{your Haystack REST API server url}}` in the `.env` or environment variable. (See `.env.example`.)
+2. Make sure your Haystack REST API server is running on the same url.
+
 ## How to run
 
 1. Install dependencies:
@@ -8,19 +13,5 @@
    ```bash
    npm start
    ```
-
-## License
-
-This project is based on the original work by Antonio Bonfiglio and is licensed under the Apache License 2.0. You may obtain a copy of the License at:
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-## Attribution
-
-Changes made to the original work can be viewed in detail at [RELEASE NOTES](https://github.com/im-no-body/chatbot-ui/releases)
+3. Go to `/upload` url and upload your knowledge-base in a .txt format file
+4. Now you can go to `/chatbot-ui` and chat with the bot about your knowledge-base.
