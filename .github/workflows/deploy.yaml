@@ -6,11 +6,6 @@ on:
       - main
     paths-ignore:
       - "chore(release):*"
-  pull_request:
-    branches:
-      - main
-    types:
-      - closed
 
 jobs:
   check-commit-message:
