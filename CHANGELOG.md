@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.2.1 (2024-12-08)
+
+
+### Bug Fixes
+
+* workflow trigger on main branch PR merge ([#20](https://github.com/su-brat/chatbot-ui/issues/20)) ([#21](https://github.com/su-brat/chatbot-ui/issues/21)) ([04752a5](https://github.com/su-brat/chatbot-ui/commit/04752a56628c4f6d065ba899a6fe9b2683373056))
+
 ## 1.2.0 (2024-10-05)
 
 
