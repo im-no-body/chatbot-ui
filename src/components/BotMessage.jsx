@@ -18,9 +18,9 @@ export default function BotMessage({ fetchMessage }) {
       <div className="bot-message">
         {isLoading ? (
           <>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
           </>
         ) : (
           message
