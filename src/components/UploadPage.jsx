@@ -1,9 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import API from "../helpers/api";
 
 function UploadPage() {
   const [fileObject, setFileObject] = useState(null);
+
+  useEffect(() => {
+    const dropZone = document.getElementById("dropzone");
+    const uploadInput = document.getElementById("fileinput");
+
+    dropZone.addEventListener("dragover", (event) => {
+      event.preventDefault(); // Prevent default browser behavior
+    });
+
+    dropZone.addEventListener("drop", (event) => {
+      event.preventDefault();
+      const files = event.dataTransfer.files;
+      setFileObject(files[0]);
+      uploadInput.files = files;
+    });
+  }, []);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -24,12 +40,17 @@ function UploadPage() {
   };
 
   return (
-    <div className="upload-container">
+    <div className="upload-container" id="dropzone">
       <div className="upload-header">Update knowledge</div>
       <div className="upload-body">
         <div className="upload-input">
           <p className="upload-instructions">Please upload a .txt file</p>
-          <input type="file" accept=".txt" onChange={handleFileChange} />
+          <input
+            id="fileinput"
+            type="file"
+            accept=".txt"
+            onChange={handleFileChange}
+          />
         </div>
         <div>
           <button
